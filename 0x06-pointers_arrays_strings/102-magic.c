@@ -3,11 +3,9 @@
 /**
  * main - Entry point of the program
  *
- * This function initializes variables, performs
- * a calculation, and prints the result.
- *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int n;
@@ -20,5 +18,6 @@ int main(void)
 	*(p + 5) = 98;
 
 	printf("a[2] = %d\n", a[2]);
+
 	return (0);
 }
