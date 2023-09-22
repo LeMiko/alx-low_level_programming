@@ -1,6 +1,6 @@
 #include "main.h"
 
-unsigned int binary_to_unit(const char *binary_string)
+unsigned int binary_to_uint(const char *binary_string)
 {
     int i;
     unsigned int decimal_value = 0;
@@ -17,4 +17,3 @@ unsigned int binary_to_unit(const char *binary_string)
 
     return (decimal_value);
 }
-
