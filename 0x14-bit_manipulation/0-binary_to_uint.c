@@ -1,23 +1,19 @@
 #include "main.h"
 
-void print_binary(unsigned long int decimal)
+unsigned int binary_to_uint(const char *binary_string)
 {
-    int i, count = 0;
-    unsigned long int current;
+    int i;
+    unsigned int decimal_value = 0;
 
-    for (i = 63; i >= 0; i--)
+    if (!binary_string)
+        return (0);
+
+    for (i = 0; binary_string[i]; i++)
     {
-        current = decimal >> i;
-
-        if (current & 1)
-        {
-            _putchar('1');
-            count++;
-        }
-        else if (count)
-            _putchar('0');
+        if (binary_string[i] < '0' || binary_string[i] > '1')
+            return (0);
+        decimal_value = 2 * decimal_value + (binary_string[i] - '0');
     }
 
-    if (!count)
-        _putchar('0');
+    return (decimal_value);
 }
